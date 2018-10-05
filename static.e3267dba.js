@@ -615,7 +615,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/page',
-  file: '/app/dist/react-static-routes.js',
+  file: '/opt/atlassian/pipelines/agent/build/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/containers/page', {
       disableWarnings: true
@@ -635,7 +635,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/404',
-  file: '/app/dist/react-static-routes.js',
+  file: '/opt/atlassian/pipelines/agent/build/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/containers/404', {
       disableWarnings: true
@@ -1386,7 +1386,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function TextBlock(props) {
   var textClass = 'text_block';
-  return _react2.default.createElement('div', { 'class': textClass, dangerouslySetInnerHTML: { __html: props.text } });
+  return _react2.default.createElement('div', { className: textClass, dangerouslySetInnerHTML: { __html: props.text } });
 }
 
 /***/ }),
@@ -2069,7 +2069,7 @@ var Menu = function (_React$Component) {
                                         { className: 'menu__item' },
                                         _react2.default.createElement(
                                             'a',
-                                            { className: 'menu__link', href: '../../company-policies/modern-slavery/' },
+                                            { className: 'menu__link', href: '/modern-slavery-policy' },
                                             'Modern slavery policy'
                                         )
                                     ),
@@ -2078,8 +2078,7 @@ var Menu = function (_React$Component) {
                                         { className: 'menu__item' },
                                         _react2.default.createElement(
                                             'a',
-                                            { className: 'menu__link',
-                                                href: '../../company-policies/information-security-management-policy/' },
+                                            { className: 'menu__link', href: '/information-security-management-statement' },
                                             'ISM statement'
                                         )
                                     )
@@ -2187,4 +2186,4 @@ exports.push([module.i, ".content .content__footer .content__footer__extra-info 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.895ccced.js.map
+//# sourceMappingURL=static.e3267dba.js.map
