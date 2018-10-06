@@ -1398,7 +1398,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "/*\n  @include media(\"md-up\") {\n    [styles for tablets and larger]\n  }\n  @include media(\"sm-down\") {\n    [styles for portrait tablets and smaller]\n  }\n*/\n.content .content__main li {\n  position: relative;\n  top: 5px;\n  padding-left: 30px;\n  margin-top: 10px;\n  line-height: 1.5;\n  list-style: none; }\n\n.content .content__main li:before {\n  content: \"\\2022\";\n  font-size: 30px;\n  position: absolute;\n  line-height: 15px;\n  left: 0;\n  top: 6px; }\n\n.text_block ul {\n  display: block;\n  list-style-type: disc;\n  padding-left: 40px;\n  padding-bottom: 20px; }\n", ""]);
+exports.push([module.i, "/*\n  @include media(\"md-up\") {\n    [styles for tablets and larger]\n  }\n  @include media(\"sm-down\") {\n    [styles for portrait tablets and smaller]\n  }\n*/\n.content .content__main li {\n  position: relative;\n  top: 5px;\n  padding-left: 30px;\n  margin-top: 10px;\n  line-height: 1.5;\n  list-style: none; }\n\n.content .content__main li:before {\n  content: \"\\2022\";\n  font-size: 30px;\n  position: absolute;\n  line-height: 15px;\n  left: 0;\n  top: 6px; }\n\n.text_block ul {\n  display: block;\n  list-style-type: disc;\n  padding-left: 40px;\n  padding-bottom: 20px; }\n\n.text_block img {\n  border-style: none;\n  max-width: 100%;\n  height: auto; }\n", ""]);
 
 // exports
 
@@ -2180,4 +2180,4 @@ exports.push([module.i, ".content .content__footer .content__footer__extra-info 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.6fb48721.js.map
+//# sourceMappingURL=static.7f3b4dbc.js.map
