@@ -1525,7 +1525,7 @@ var Menu = function (_React$Component) {
                                 { className: 'menu__item' },
                                 _react2.default.createElement(
                                     'a',
-                                    { className: 'menu__link', href: '' },
+                                    { className: 'menu__link', href: '/' },
                                     'Home'
                                 )
                             ),
@@ -2180,4 +2180,4 @@ exports.push([module.i, ".content .content__footer .content__footer__extra-info 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.56902891.js.map
+//# sourceMappingURL=static.6fb48721.js.map
