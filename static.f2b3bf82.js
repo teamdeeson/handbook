@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://handbook-test.deeson.co.uk/";
+/******/ 	__webpack_require__.p = "https://handbook.deeson.co.uk/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 10);
@@ -2180,4 +2180,4 @@ exports.push([module.i, ".content .content__footer .content__footer__extra-info 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.b2b5087e.js.map
+//# sourceMappingURL=static.f2b3bf82.js.map
