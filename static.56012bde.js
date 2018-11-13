@@ -371,7 +371,7 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
                     )
                 );
             } }),
-        _react2.default.createElement(_menu2.default, { data: menuItems }),
+        _react2.default.createElement(_menu2.default, { data: menuItems, page: page }),
         _react2.default.createElement(
             'div',
             { className: 'handbook__main off-canvas-menu__content' },
@@ -1452,8 +1452,10 @@ var MenuSections = function (_React$Component) {
     _createClass(MenuSections, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             return this.props.sections.data.map(function (section, index) {
-                return _react2.default.createElement(MenuSection, { section: section, key: index });
+                return _react2.default.createElement(MenuSection, { section: section, key: index, slug: _this2.props.slug });
             });
         }
     }]);
@@ -1473,8 +1475,10 @@ var MenuSection = function (_React$Component2) {
     _createClass(MenuSection, [{
         key: 'render',
         value: function render() {
-            var menuItems = this.props.section.items.map(function (item, index) {
-                return _react2.default.createElement(MenuItem, { item: item, key: index });
+            var _this4 = this;
+
+            var menuItems = this.props.section.items.map(function (item) {
+                return _react2.default.createElement(MenuItem, { item: item, key: item.menu_item.id, slug: _this4.props.slug });
             });
             var sectionTitle = typeof this.props.section.primary.menu_section_title[0] !== 'undefined' ? this.props.section.primary.menu_section_title[0].text : '[Title not set]';
             return _react2.default.createElement(
@@ -1511,9 +1515,9 @@ var MenuItem = function (_React$Component3) {
                 menuItemSlug = this.props.item.menu_item.data.slug;
             }
             var menuLink = menuItemSlug !== null ? '/' + menuItemSlug : '#';
-            /*if (menuLink === window.location.pathname) {
+            if (menuLink === '/' + this.props.slug) {
                 classNames += ' menu__item--active';
-            }*/
+            }
             var menuLinkTitle = typeof this.props.item.menu_item_title[0] !== 'undefined' ? this.props.item.menu_item_title[0].text : '[Title not set]';
             return _react2.default.createElement(
                 'li',
@@ -1531,7 +1535,8 @@ var MenuItem = function (_React$Component3) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
-    var menuItems = _ref.menuItems;
+    var menuItems = _ref.menuItems,
+        page = _ref.page;
 
     return _react2.default.createElement(
         'div',
@@ -1568,7 +1573,7 @@ exports.default = (0, _reactStatic.withRouteData)(function (_ref) {
                             'Home'
                         )
                     ),
-                    _react2.default.createElement(MenuSections, { sections: menuItems[0] })
+                    _react2.default.createElement(MenuSections, { sections: menuItems[0], slug: page.slug })
                 )
             )
         )
@@ -1585,7 +1590,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "/*\n  @include media(\"md-up\") {\n    [styles for tablets and larger]\n  }\n  @include media(\"sm-down\") {\n    [styles for portrait tablets and smaller]\n  }\n*/\n@media only screen and (min-width: 901px) {\n  .handbook .handbook__sidebar {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0; }\n  .handbook .handbook__sidebar {\n    width: 375px;\n    min-height: 100vh;\n    overflow-y: scroll;\n    padding: 45px;\n    background-color: #edeee9;\n    color: #000; } }\n\n.logo .logo__image {\n  width: 150px;\n  padding-top: 28px;\n  height: 0;\n  overflow: hidden;\n  display: block;\n  background-image: url(" + escape(__webpack_require__(26)) + ");\n  background-repeat: no-repeat; }\n\n.off-canvas-menu .off-canvas-menu__close-trigger, .off-canvas-menu .off-canvas-menu__trigger {\n  display: none; }\n\n.sidebar .sidebar__logo, .sidebar .sidebar__search {\n  margin-bottom: 3.5rem; }\n\n.sidebar .sidebar__menus {\n  margin-bottom: 1rem; }\n\narticle, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {\n  display: block; }\n\n.nav-block .nav-block___menu {\n  font-size: 1rem;\n  line-height: 1.3125; }\n\n.menu {\n  padding: 0;\n  margin: .625em 0 0; }\n\n.menu .menu__item {\n  list-style: none;\n  margin-bottom: .625em; }\n\n.menu .menu {\n  margin-left: 1.5em;\n  text-transform: none; }\n\n.menu {\n  padding: 0;\n  margin: .625em 0 0; }\n\n.nav-block___menu li {\n  font-family: \"MaisonNeue-Bold\", Helvetica, Arial; }\n\n.menu .menu__link {\n  font-family: \"MaisonNeue-Light\", Helvetica, Arial;\n  color: #000;\n  text-decoration: none; }\n\na, a:visited, html {\n  color: #000; }\n\na {\n  background-color: transparent;\n  -webkit-text-decoration-skip: objects; }\n", ""]);
+exports.push([module.i, "/*\n  @include media(\"md-up\") {\n    [styles for tablets and larger]\n  }\n  @include media(\"sm-down\") {\n    [styles for portrait tablets and smaller]\n  }\n*/\n@media only screen and (min-width: 901px) {\n  .handbook .handbook__sidebar {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0; }\n  .handbook .handbook__sidebar {\n    width: 375px;\n    min-height: 100vh;\n    overflow-y: scroll;\n    padding: 45px;\n    background-color: #edeee9;\n    color: #000; } }\n\n.logo .logo__image {\n  width: 150px;\n  padding-top: 28px;\n  height: 0;\n  overflow: hidden;\n  display: block;\n  background-image: url(" + escape(__webpack_require__(26)) + ");\n  background-repeat: no-repeat; }\n\n.off-canvas-menu .off-canvas-menu__close-trigger, .off-canvas-menu .off-canvas-menu__trigger {\n  display: none; }\n\n.sidebar .sidebar__logo, .sidebar .sidebar__search {\n  margin-bottom: 3.5rem; }\n\n.sidebar .sidebar__menus {\n  margin-bottom: 1rem; }\n\narticle, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {\n  display: block; }\n\n.nav-block .nav-block___menu {\n  font-size: 1rem;\n  line-height: 1.3125; }\n\n.menu {\n  padding: 0;\n  margin: .625em 0 0; }\n\n.menu .menu__item {\n  list-style: none;\n  margin-bottom: .625em; }\n\n.menu .menu {\n  margin-left: 1.5em;\n  text-transform: none; }\n\n.menu {\n  padding: 0;\n  margin: .625em 0 0; }\n\n.nav-block___menu li {\n  font-family: \"MaisonNeue-Bold\", Helvetica, Arial; }\n\n.menu .menu__link {\n  font-family: \"MaisonNeue-Light\", Helvetica, Arial;\n  color: #000;\n  text-decoration: none; }\n\na, a:visited, html {\n  color: #000; }\n\na {\n  background-color: transparent;\n  -webkit-text-decoration-skip: objects; }\n\n.menu__item--active {\n  font-weight: bold; }\n", ""]);
 
 // exports
 
@@ -1704,4 +1709,4 @@ module.exports = __webpack_require__.p + "static/MaisonNeue-Light.40d268ec.ttf";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.245ce262.js.map
+//# sourceMappingURL=static.56012bde.js.map
